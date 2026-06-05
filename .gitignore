@@ -1,0 +1,28 @@
+# Qt Creator 用户配置
+*.pro.user
+*.pro.user.*
+*.user
+*.user.*
+
+# Qt 构建目录
+build/
+build-*/
+Build-*/
+
+# qmake / make 生成文件
+Makefile
+.qmake.stash
+*.o
+moc_*
+ui_*.h
+qrc_*.cpp
+
+# CMake 生成文件
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+
+# 临时文件
+*.autosave
+*~
