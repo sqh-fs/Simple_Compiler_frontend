@@ -1,0 +1,7 @@
+while (count < 100 && (done == false || retry > 0)) {
+    if (retry = 5) {
+        retry = retry - 1;
+    }
+    count = count + 1;
+}
+

@@ -1,0 +1,10 @@
+int a;
+double b;
+float c;
+bool flag;
+
+x = 42;
+y = 3.14;
+flag = true;
+z = x + y * 2;
+z = (1 + 1 - 10) * 3 / 2;

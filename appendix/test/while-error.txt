@@ -1,0 +1,9 @@
+while (i < 10 | flag = true) {
+    sum = sum + i;
+    i = i + 1;
+}
+while (i >=10 && flag == false) {
+    int d = ;
+    d = 9 - 10；
+}
+你好

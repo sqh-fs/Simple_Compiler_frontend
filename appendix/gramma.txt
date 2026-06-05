@@ -1,0 +1,49 @@
+Program → StatementList
+
+StatementList → Statement StatementList | ε
+
+Statement → Declaration | Assignment | IfStatement | WhileStatement
+
+Declaration → Type IDENTIFIER ArrayDecl InitPart ;
+
+ArrayDecl → [ NUMBER ] ArrayDecl | ε
+
+InitPart → = Initial | ε
+
+Initial → Expression | { NUMBER NumberList }
+
+NumberList → , NUMBER NumberList | ε
+
+Assignment → IDENTIFIER = Expression ;
+
+Type → INT | FLOAT | DOUBLE | BOOL
+
+IfStatement → if ( BoolExpression ) { StatementList } ElsePart
+
+ElsePart → else { StatementList } | ε
+
+WhileStatement → while ( BoolExpression ) { StatementList }
+
+Expression → Term ExpressionTail
+
+ExpressionTail → + Term ExpressionTail | - Term ExpressionTail | ε
+
+Term → Factor TermTail
+
+TermTail → * Factor TermTail | / Factor TermTail | ε
+
+Factor → ( Expression ) | IDENTIFIER | NUMBER | BOOL_LITERAL
+
+BoolExpression → BoolTerm BoolExprTail
+
+BoolExprTail → || BoolTerm BoolExprTail | ε
+
+BoolTerm → BoolFactor BoolTermTail
+
+BoolTermTail → && BoolFactor BoolTermTail | ε
+
+BoolFactor → ! BoolFactor | Relation
+
+Relation → Expression RelOp Expression | ( BoolExpression )
+
+RelOp → > | < | >= | <= | == | !=

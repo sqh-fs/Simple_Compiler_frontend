@@ -1,0 +1,17 @@
+int x;
+x = 5 + 3;
+
+if (x > 0) {
+    bool b;
+    b = true;
+    x = x + 1;
+}
+else {
+  float d;
+  d = 1.3;
+}
+
+while (x < 10) {
+    x = x + 1;
+    x = 10;
+}
